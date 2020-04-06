@@ -57,3 +57,5 @@ void main(void)
   while(1) {
   }
 }
+
+//#link "famitone5.s"
