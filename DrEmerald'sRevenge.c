@@ -59,3 +59,4 @@ void main(void)
 }
 
 //#link "famitone5.s"
+void __fastcall__ famitone_update(void);
