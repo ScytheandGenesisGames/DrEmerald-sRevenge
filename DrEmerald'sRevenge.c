@@ -14,6 +14,14 @@
 // link the pattern table into CHR ROM
 //#link "chr_generic.s"
 
+// bank-switching configuration
+//#define NES_MAPPER 1		// Mapper 1 (MMC1)
+//#define NES_PRG_BANKS 16	// # of 16KB PRG banks
+//#define NES_CHR_BANKS 16	// # of 8KB CHR banks
+//#define NES_MIRRORING 1
+
+
+
 // BCD arithmetic support
 #include "bcd.h"
 //#link "bcd.c"
@@ -51,6 +59,8 @@ void main(void)
   // draw message  
   vram_adr(NTADR_A(2,2));
   vram_write("HELLO, WORLD!", 12);
+  vram_adr(NTADR_A(3,4));
+  vram_write("Dr. Emerald is back!", 20);
   // enable rendering
   ppu_on_all();
   // infinite loop
